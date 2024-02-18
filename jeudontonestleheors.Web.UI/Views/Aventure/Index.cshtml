@@ -1,0 +1,21 @@
+﻿
+@using jeudontonestleheors.Core.Data.Models
+@model List<Aventure>
+
+
+<h1 class="text-center">@ViewBag.MonTitre</h1>
+<h2 class="text-center small">Vos dernières aventures</h2>
+<div class="row justify-content-center">
+    <a class="btn btn-primary" asp-controller="aventure" asp-action="Create"> Nouvelle Aventure </a>
+</div>
+<div class="row">
+    @foreach (var aventure in Model)
+    {
+        <a href="#" class="card border m-1 text-center" style="width:8rem;">
+            <div class="card-body">
+             @aventure.Titre   
+            </div>
+        </a>
+
+    }
+</div>
