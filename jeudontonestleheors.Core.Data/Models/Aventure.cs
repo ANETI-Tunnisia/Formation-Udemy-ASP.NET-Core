@@ -1,5 +1,9 @@
-﻿namespace jeudontonestleheors.Core.Data.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace jeudontonestleheors.Core.Data.Models
 {
+
+    [Table("Aventure")]
     public class Aventure
     {
         public int Id { get; set; }
