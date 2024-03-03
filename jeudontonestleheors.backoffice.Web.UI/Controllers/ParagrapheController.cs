@@ -1,4 +1,5 @@
-﻿using jeudontonestleheors.Core.Data.Models;
+﻿using jeudontonestleheors.Core.Data;
+using jeudontonestleheors.Core.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -7,12 +8,24 @@ namespace jeudontonestleheors.backoffice.Web.UI.Controllers
     public class ParagrapheController : Controller
     {
         #region paragraphe provisoire pour l'entité
-        List<Paragraphe> _maListParagraphe = new List<Paragraphe>()
+        //List<Paragraphe> _maListParagraphe = new List<Paragraphe>()
+        //{
+        //    new Paragraphe { Id = 1,Numero=10,Titre="Titre 1" },
+        //    new Paragraphe {Id = 2,Numero=14,Titre="Titre 2"},
+        //    new Paragraphe {Id=3,Numero=32,Titre="Titre3"}
+        //};
+        #endregion
+
+        #region Champs Privés
+        private DefaultContext _context = null;
+        #endregion
+
+        #region Constructors
+        public ParagrapheController(DefaultContext context)
         {
-            new Paragraphe { Id = 1,Numero=10,Titre="Titre 1" },
-            new Paragraphe {Id = 2,Numero=14,Titre="Titre 2"},
-            new Paragraphe {Id=3,Numero=32,Titre="Titre3"}
-        };
+            this._context = context;     
+        }
+
         #endregion
         public IActionResult Index(int Id)
         {
@@ -26,12 +39,14 @@ namespace jeudontonestleheors.backoffice.Web.UI.Controllers
         [HttpPost]  
         public IActionResult Create(Paragraphe paragraphe )
         {
+            this._context.Add(paragraphe);
+            this._context.SaveChanges();
             return this.View();
         }
         public IActionResult Edit(int Id)
         {
             Paragraphe paragraphe = null;
-           paragraphe= _maListParagraphe.First(item=>item.Id == Id);
+           //paragraphe= _maListParagraphe.First(item=>item.Id == Id);
             return this.View(paragraphe);
         }
     }
