@@ -1,7 +1,9 @@
 ﻿using jeudontonestleheors.Core.Data;
 using jeudontonestleheors.Core.Data.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Diagnostics;
 
 namespace jeudontonestleheors.backoffice.Web.UI.Controllers
 {
@@ -49,5 +51,9 @@ namespace jeudontonestleheors.backoffice.Web.UI.Controllers
            //paragraphe= _maListParagraphe.First(item=>item.Id == Id);
             return this.View(paragraphe);
         }
+
+      
+
+
     }
 }

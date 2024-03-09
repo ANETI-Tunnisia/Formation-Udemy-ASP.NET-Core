@@ -5,5 +5,6 @@ namespace jeudontonestleheors.backoffice.Web.UI.Models
         public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
     }
 }
