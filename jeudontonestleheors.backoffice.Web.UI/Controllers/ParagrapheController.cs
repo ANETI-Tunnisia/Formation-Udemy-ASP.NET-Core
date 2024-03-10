@@ -49,9 +49,22 @@ namespace jeudontonestleheors.backoffice.Web.UI.Controllers
         {
             Paragraphe paragraphe = null;
            //paragraphe= _maListParagraphe.First(item=>item.Id == Id);
+           paragraphe=this._context.Paragraphes.FirstOrDefault(x => x.Id == Id);
+
+
             return this.View(paragraphe);
         }
+        [HttpPost]
+        public IActionResult Edit(Paragraphe paragraphe)
+        {
+            //this._context.Update(paragraphe);
 
+            this._context.Attach<Paragraphe>(paragraphe);
+            this._context.Entry(paragraphe).Property(item => item.Titre).IsModified = true;
+
+            this._context.SaveChanges();
+            return this.View(paragraphe);
+        }
       
 
 
