@@ -23,6 +23,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            @{
+                                var url = Url.Action(action: "Index", controller: "Aventure");
+                            }
+                            <a href="@url">Mes Aventures</a> @* URl.Action *@
+							@* @Html.ActionLink("Mes Aventures", actionName: "Index", controllerName: "aventure") MVC Like*@
+                            @* <a class="nav-link text-dark" asp-area="" asp-controller="Aventure" asp-action="Index">Mes Aventure</a> Razor Like *@
+                           
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
