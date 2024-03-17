@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jeudontonestleheors.backoff
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MesPremiersTestsAvecEntitiesCodeFirst", "..\MesPremiersTestsAvecEntitiesCodeFirst\MesPremiersTestsAvecEntitiesCodeFirst.csproj", "{04CD3EDA-54A7-4902-AFC9-D22600D0A623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteNoTracked", "..\DecouverteNoTracked\DecouverteNoTracked.csproj", "{6EE998D3-3207-4674-A23D-3B5C5D0B7D71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecouverteNoTracked", "..\DecouverteNoTracked\DecouverteNoTracked.csproj", "{6EE998D3-3207-4674-A23D-3B5C5D0B7D71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentification", "Authentification", "{505FDAB6-5D3A-4348-AA0F-3675C300E011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuthentificationFacebook", "..\TestAuthentificationFacebook\TestAuthentificationFacebook.csproj", "{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{6EE998D3-3207-4674-A23D-3B5C5D0B7D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE998D3-3207-4674-A23D-3B5C5D0B7D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE998D3-3207-4674-A23D-3B5C5D0B7D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +73,8 @@ Global
 		{008E55DC-1E15-4C29-A132-9A940A54CD66} = {5F5C99E4-C276-4A51-9AA4-9C917E510DCF}
 		{04CD3EDA-54A7-4902-AFC9-D22600D0A623} = {16B74F0B-5583-46F9-9C3A-BE86AED8BA4B}
 		{6EE998D3-3207-4674-A23D-3B5C5D0B7D71} = {16B74F0B-5583-46F9-9C3A-BE86AED8BA4B}
+		{505FDAB6-5D3A-4348-AA0F-3675C300E011} = {16B74F0B-5583-46F9-9C3A-BE86AED8BA4B}
+		{C53BBE50-DD80-4CCD-89E8-5A5C180DCB07} = {505FDAB6-5D3A-4348-AA0F-3675C300E011}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC75404E-ED1D-4EA3-9597-2C46E94AED47}
