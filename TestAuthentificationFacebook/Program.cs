@@ -21,7 +21,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 app.UseStaticFiles();
-
+var test = app.Configuration["apis:facebook:id"];
 app.UseRouting();
 app.UseAuthentication();;
 
