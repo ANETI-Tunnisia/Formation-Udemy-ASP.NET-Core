@@ -12,8 +12,17 @@ builder.Services.AddDefaultIdentity<TestAuthentificationFacebook.Areas.Identity.
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+var pp = builder.Configuration["apis:facebook:id"];
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = builder.Configuration["apis:facebook:id"];
+    options.AppSecret = builder.Configuration["apis:facebook:secret"];
+
+});
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
